@@ -6,241 +6,350 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
   <title>Pizza Hub</title>
 </head>
 
 <body>
   <div class="container-fluid">
     <h1>Pizza Hub</h1>
-  </div>
+    <div class="row">
+      <div class="col-md-9">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/assets/pizza-sun-offer.jpeg" class="d-block w-100 h-90" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>TERRIFIC SUNDAYS</h5>
+                <p>Buy 1 get 1 free every Sunday.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/assets/chef-special.jpeg" class="d-block w-100 h-90" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>40% DISCOUNT</h5>
+                <p>Try our new Chef's Special.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/assets/new-loc.jpeg" class="d-block w-100 h-90" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>80% Discount</h5>
+                <p>On every pizza at our new Westlands branch</p>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
 
-  <div class="card">
-    <div class="card-header">
-      <h3>CLASSIC PIZZAS</h3>
-    </div>
-
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
-      </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">HAWAIIAN</h5>
-        <p class="card-text">Macon - pineapple.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
-
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
-      </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">BOEREWORS</h5>
-        <p class="card-text">100% beef mince - fresh tomato - fresh onion.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
-
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
-      </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">BBQ STEAK</h5>
-        <p class="card-text">Marinated bbq steak.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
-
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
-      </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">REGINA</h5>
-        <p class="card-text">Sandwich beef - mushroom.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
-
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
-      </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">PERI-PERI CHICKEN</h5>
-        <p class="card-text">Spicy peri-peri chicken.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
-
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
-      </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">CHICKEN & MUSHROOM</h5>
-        <p class="card-text">Succulent bbq chicken - mushroom - creamy mayo.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
-
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
-      </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">CHICKEN TIKKA</h5>
-        <p class="card-text">Marinated tikka chicken - green pepper - onions.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
+      <div class="col-md-3">
+        <h2>CHECKOUT
+          <span class="badge badge-secondary badge-pill">3</span>
+        </h2>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Boerewors</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">Ksh. 1100</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Chicken & beef pepperoni name</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">Ksh. 1200</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Toppings</h6>
+              <small class="text-muted">Topping description</small>
+            </div>
+            <span class="text-muted">Ksh. 350</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">Promo code</h6>
+              <small>EXAMPLECODE</small>
+            </div>
+            <span class="text-success">-Ksh. 100</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (KSH)</span>
+            <strong>Ksh. 2550</strong>
+          </li>
+        </ul>
       </div>
     </div>
 
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
+    <div class="card">
+      <nav class="navbar navbar-dark bg-dark">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </nav>
+      <div class="card-header">
+        <h3>CLASSIC PIZZAS</h3>
       </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">VEG TIKKA</h5>
-        <p class="card-text">Sweetcorn - red & green pepper - mushroom - onion - jalapeños - tikka sauce.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
 
-    <div class="card-header">
-      <h3>DELUXE PIZZAS</h3>
-    </div>
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">HAWAIIAN</h5>
+          <p class="card-text">Macon - pineapple.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
+      </div>
 
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">BOEREWORS</h5>
+          <p class="card-text">100% beef mince - fresh tomato - fresh onion.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
       </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">CHICKEN & BEEF PEPPERONI</h5>
-        <p class="card-text">Succulent bbq chicken - beef pepperoni mushroom - green pepper.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
 
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">BBQ STEAK</h5>
+          <p class="card-text">Marinated bbq steak.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
       </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">CHICKEN MACON BBQ</h5>
-        <p class="card-text">Succulent bbq chicken - macon - sweetcorn - onion.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
 
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">REGINA</h5>
+          <p class="card-text">Sandwich beef - mushroom.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
       </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">CHICKEN HAWAIIAN</h5>
-        <p class="card-text">Succulent bbq chicken - pineapple.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
 
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">PERI-PERI CHICKEN</h5>
+          <p class="card-text">Spicy peri-peri chicken.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
       </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">BEEF PEPPERONI PLUS</h5>
-        <p class="card-text">Double beef pepperoni - mushroom - fresh onion.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
 
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">CHICKEN & MUSHROOM</h5>
+          <p class="card-text">Succulent bbq chicken - mushroom - creamy mayo.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
       </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">CHEESE BURGER</h5>
-        <p class="card-text">100% beef mince - real cheddar cheese.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
 
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">CHICKEN TIKKA</h5>
+          <p class="card-text">Marinated tikka chicken - green pepper - onions.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
       </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">ROAST VEG & FETA</h5>
-        <p class="card-text">Fresh red & green pepper - olives - feta cheese - mushroom.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
 
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">VEG TIKKA</h5>
+          <p class="card-text">Sweetcorn - red & green pepper - mushroom - onion - jalapeños - tikka sauce.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
       </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">VEG FEAST</h5>
-        <p class="card-text">Sweetcorn - green pepper - chilli - onion.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
 
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
+      <div class="card-header">
+        <h3>DELUXE PIZZAS</h3>
       </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">SPICY BOERWORS</h5>
-        <p class="card-text">100% beef mince - fresh onions - green pepper - jalapeño.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
 
-    <div class="card-header">
-      <h3>SUPREME PIZZAS</h3>
-    </div>
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">CHICKEN & BEEF PEPPERONI</h5>
+          <p class="card-text">Succulent bbq chicken - beef pepperoni mushroom - green pepper.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
+      </div>
 
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">CHICKEN MACON BBQ</h5>
+          <p class="card-text">Succulent bbq chicken - macon - sweetcorn - onion.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
       </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">NYAMA FEST</h5>
-        <p class="card-text">Bbq steak - pepperoni - boerewors mince - macon - ham - green pepper - onion - sweetcorn -
-          diced tomato - mozzarella cheese.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
-      </div>
-    </div>
 
-    <div class="card flex-row flex-wrap">
-      <div class="card-header border-0">
-        <img src="//placehold.it/100" alt="">
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">CHICKEN HAWAIIAN</h5>
+          <p class="card-text">Succulent bbq chicken - pineapple.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
       </div>
-      <div class="card-block px-2 mt-1">
-        <h5 class="card-title">CHICKEN FEAST</h5>
-        <p class="card-text">Chicken tikka - peri peri - green pepper - onions - sweetcorn - mushroom - mozzarella.</p>
-        <button type="button" class="btn btn-dark">+</button>
-        <button type="button" class="btn btn-dark">-</button>
+
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">BEEF PEPPERONI PLUS</h5>
+          <p class="card-text">Double beef pepperoni - mushroom - fresh onion.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
+      </div>
+
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">CHEESE BURGER</h5>
+          <p class="card-text">100% beef mince - real cheddar cheese.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
+      </div>
+
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">ROAST VEG & FETA</h5>
+          <p class="card-text">Fresh red & green pepper - olives - feta cheese - mushroom.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
+      </div>
+
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">VEG FEAST</h5>
+          <p class="card-text">Sweetcorn - green pepper - chilli - onion.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
+      </div>
+
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">SPICY BOERWORS</h5>
+          <p class="card-text">100% beef mince - fresh onions - green pepper - jalapeño.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
+      </div>
+
+      <div class="card-header">
+        <h3>SUPREME PIZZAS</h3>
+      </div>
+
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">NYAMA FEST</h5>
+          <p class="card-text">Bbq steak - pepperoni - boerewors mince - macon - ham - green pepper - onion - sweetcorn
+            -
+            diced tomato - mozzarella cheese.</p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
+      </div>
+
+      <div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+          <img src="//placehold.it/100" alt="">
+        </div>
+        <div class="card-block px-2 mt-1">
+          <h5 class="card-title">CHICKEN FEAST</h5>
+          <p class="card-text">Chicken tikka - peri peri - green pepper - onions - sweetcorn - mushroom - mozzarella.
+          </p>
+          <button type="button" class="btn btn-dark">+</button>
+          <button type="button" class="btn btn-dark">-</button>
+          <p class="card-text">Qty: </p>
+        </div>
       </div>
     </div>
   </div>
