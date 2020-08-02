@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <title>Pizza Hub</title>
 </head>
@@ -93,6 +94,9 @@
             <strong>Ksh. 2550</strong>
           </li>
         </ul>
+        <div id="dialog" title="Basic dialog">
+          <p class="dialog"></p>
+        </div>
       </div>
     </div>
 
@@ -104,33 +108,36 @@
         </form>
       </nav>
       <div class="card-header">
-        <h3>CLASSIC PIZZAS</h3>
-      </div>
+        <form id="pizza">
+          <!-- classic -->
+          <h3 class="category">CLASSIC PIZZAS</h3>
 
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">HAWAIIAN</h5>
-          <p class="card-text">Macon - pineapple.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
-        </div>
+          <div class="card flex-row flex-wrap">
+            <div class="card-header border-0">
+              <img src="//placehold.it/100" alt="">
+            </div>
+            <div class="card-block px-2 mt-1">
+              <h5 class="card-title">HAWAIIAN</h5>
+              <p class="card-text">Macon - pineapple.</p>
+              <div class="select">
+                <select class="custom-select mr-sm-2 mb-2">
+                  <option selected>Size...</option>
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </div>
+              <div class="def-number-input number-input safari_only">
+                <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                  class="minus"></button>
+                <input class="quantity" min="0" name="quantity" value="0" type="number">
+                <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                  class="plus"></button>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="order">Submit</button>
+        </form>
       </div>
 
       <div class="card flex-row flex-wrap">
@@ -141,21 +148,19 @@
           <h5 class="card-title">BOEREWORS</h5>
           <p class="card-text">100% beef mince - fresh tomato - fresh onion.</p>
 
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
@@ -166,22 +171,19 @@
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">BBQ STEAK</h5>
           <p class="card-text">Marinated bbq steak.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
@@ -192,22 +194,19 @@
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">REGINA</h5>
           <p class="card-text">Sandwich beef - mushroom.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
@@ -218,22 +217,19 @@
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">PERI-PERI CHICKEN</h5>
           <p class="card-text">Spicy peri-peri chicken.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
@@ -244,22 +240,19 @@
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">CHICKEN & MUSHROOM</h5>
           <p class="card-text">Succulent bbq chicken - mushroom - creamy mayo.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
@@ -270,22 +263,19 @@
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">CHICKEN TIKKA</h5>
           <p class="card-text">Marinated tikka chicken - green pepper - onions.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
@@ -296,27 +286,25 @@
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">VEG TIKKA</h5>
           <p class="card-text">Sweetcorn - red & green pepper - mushroom - onion - jalapeños - tikka sauce.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
+      <!-- deluxe pizzas -->
       <div class="card-header">
-        <h3>DELUXE PIZZAS</h3>
+        <h3 class="category">DELUXE PIZZAS</h3>
       </div>
 
       <div class="card flex-row flex-wrap">
@@ -326,22 +314,19 @@
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">CHICKEN & BEEF PEPPERONI</h5>
           <p class="card-text">Succulent bbq chicken - beef pepperoni mushroom - green pepper.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
@@ -352,22 +337,19 @@
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">CHICKEN MACON BBQ</h5>
           <p class="card-text">Succulent bbq chicken - macon - sweetcorn - onion.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
@@ -378,22 +360,19 @@
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">CHICKEN HAWAIIAN</h5>
           <p class="card-text">Succulent bbq chicken - pineapple.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
@@ -404,22 +383,19 @@
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">BEEF PEPPERONI PLUS</h5>
           <p class="card-text">Double beef pepperoni - mushroom - fresh onion.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
@@ -430,22 +406,19 @@
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">CHEESE BURGER</h5>
           <p class="card-text">100% beef mince - real cheddar cheese.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
@@ -456,22 +429,19 @@
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">ROAST VEG & FETA</h5>
           <p class="card-text">Fresh red & green pepper - olives - feta cheese - mushroom.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
@@ -482,22 +452,19 @@
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">VEG FEAST</h5>
           <p class="card-text">Sweetcorn - green pepper - chilli - onion.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
@@ -508,27 +475,25 @@
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">SPICY BOERWORS</h5>
           <p class="card-text">100% beef mince - fresh onions - green pepper - jalapeño.</p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+          </div>
         </div>
       </div>
 
+      <!-- supreme pizzas -->
       <div class="card-header">
-        <h3>SUPREME PIZZAS</h3>
+        <h3 class="category">SUPREME PIZZAS</h3>
       </div>
 
       <div class="card flex-row flex-wrap">
@@ -537,27 +502,25 @@
         </div>
         <div class="card-block px-2 mt-1">
           <h5 class="card-title">NYAMA FEST</h5>
-          <p class="card-text">Bbq steak - pepperoni - boerewors mince - macon - ham - green pepper - onion - sweetcorn
+          <p class="card-text">Bbq steak - pepperoni - boerewors mince - macon - ham - green pepper - onion -
+            sweetcorn
             - diced tomato - mozzarella cheese.</p>
-          <div>
 
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
           </div>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="def-number-input number-input safari_only">
+            <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+              class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+              class="plus"></button>
+          </div>
         </div>
       </div>
 
@@ -569,22 +532,21 @@
           <h5 class="card-title">CHICKEN FEAST</h5>
           <p class="card-text">Chicken tikka - peri peri - green pepper - onions - sweetcorn - mushroom - mozzarella.
           </p>
-
-<form>
-  <div class="select">
-    <select class="custom-select mr-sm-2 mb-2">
-      <option selected>Size...</option>
-      <option value="0">Small</option>
-      <option value="2">Medium</option>
-      <option value="3">Large</option>
-    </select>
-  </div>
-  <div class="def-number-input number-input safari_only">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-    <input class="quantity" min="0" name="quantity" value="0" type="number">
-    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-  </div>
-</form>
+          <div class="select">
+            <select class="custom-select mr-sm-2 mb-2">
+              <option selected>Size...</option>
+              <option value="0">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
+          </div>
+          <div class="def-number-input number-input safari_only">
+            <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+              class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="0" type="number">
+            <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+              class="plus"></button>
+          </div>
         </div>
       </div>
     </div>
@@ -599,6 +561,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
