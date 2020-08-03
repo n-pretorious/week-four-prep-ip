@@ -1,7 +1,8 @@
-function pizza(category, flavour, size, quantity, price) {
+function pizza(category, flavour, size, topping, quantity, price) {
   this.category = category,
     this.flavour = flavour,
     this.size = size,
+    this.topping = topping,
     this.quantity = parseInt(quantity),
     this.price = price
 }
@@ -22,31 +23,67 @@ $(document).ready(function () {
     let price = () => {
       if (category === "classic pizzas") {
         if (size === "small" && quantity >= 1) {
-          return quantity * 500
+          if ($('input[type="checkbox"]').is(":checked")) {
+            return quantity * 500 + 100
+          } else {
+            return quantity * 500
+          }
         } else if (size === "medium" && quantity >= 1) {
-          return  quantity * 750
+          if ($('input[type="checkbox"]').is(":checked")) {
+            return quantity * 750 + 100
+          } else {
+            return quantity * 750
+          }
         } else if (size === "large" && quantity >= 1) {
-          return quantity * 950
+          if ($('input[type="checkbox"]').is(":checked")) {
+            return quantity * 950 + 100
+          } else {
+            return quantity * 950
+          }
         } else {
           alert("Kindly pick pizza SIZE: & QTY: for " + flavour)
         }
       } else if (category === "deluxe pizzas") {
         if (size === "small" && quantity >= 1) {
-          return quantity * 550
+          if ($('input[type="checkbox"]').is(":checked")) {
+            return quantity * 550 + 100
+          } else {
+            return quantity * 550
+          }
         } else if (size === "medium" && quantity >= 1) {
-          return quantity * 800
+          if ($('input[type="checkbox"]').is(":checked")) {
+            return quantity * 800 + 100
+          } else {
+            return quantity * 800
+          }
         } else if (size === "large" && quantity >= 1) {
-          return quantity * 1000
+          if ($('input[type="checkbox"]').is(":checked")) {
+            return quantity * 1000 + 100
+          } else {
+            return quantity * 1000
+          }
         } else {
           alert("Kindly pick pizza SIZE: & QTY: for " + flavour)
         }
       } else if (category === "supreme pizzas") {
         if (size === "small" && quantity >= 1) {
-          return quantity * 600
+          if ($('input[type="checkbox"]').is(":checked")) {
+            return quantity * 600 + 100
+          } else {
+            return quantity * 600
+          }
         } else if (size === "medium" && quantity >= 1) {
-          return quantity * 940
+          if ($('input[type="checkbox"]').is(":checked")) {
+            return quantity * 940 + 100
+          } else {
+            return quantity * 940
+          }
         } else if (size === "large" && quantity >= 1) {
-          return quantity * 1210
+          if ($('input[type="checkbox"]').is(":checked")) {
+            return quantity * 1210 + 100
+          } else {
+            return quantity * 1210
+          }
         } else {
           alert("Kindly pick pizza SIZE: & QTY: for " + flavour)
         }

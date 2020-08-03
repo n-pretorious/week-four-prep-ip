@@ -114,18 +114,23 @@
 
           <div class="card flex-row flex-wrap">
             <div class="card-header border-0">
-              <img src="//placehold.it/100" alt="">
+              <img src="//placehold.it/200" alt="">
             </div>
             <div class="card-block px-2 mt-1">
               <h5 class="card-title">HAWAIIAN</h5>
               <p class="card-text">Macon - pineapple.</p>
               <div class="select">
-                <select class="custom-select mr-sm-2 mb-2">
-                  <option selected>Size...</option>
+                <select class="custom-select mr-sm-2 mb-2 size">
+                  <option>Size...</option>
                   <option value="small">Small</option>
                   <option value="medium">Medium</option>
                   <option value="large">Large</option>
                 </select>
+                <div class="form-check">
+                  <label class="form-check-label" for="tops">
+                    <input type="checkbox" class="form-check-input" id="tops" name="topping" value="0">Topping
+                  </label>
+                </div>
               </div>
               <div class="def-number-input number-input safari_only">
                 <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
@@ -134,9 +139,9 @@
                 <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
                   class="plus"></button>
               </div>
+              <button type="submit" class="btn btn-dark order mb-2">Submit Order</button>
             </div>
           </div>
-          <button type="submit" class="order">Submit</button>
         </form>
       </div>
 

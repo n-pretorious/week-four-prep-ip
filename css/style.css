@@ -38,7 +38,7 @@
   justify-content: space-around;
   align-items: center;
   margin-bottom: 5px;
-  background-color: rgb(48, 48, 48);
+  background-color: #343a40;
 }
 
 .number-input button {
@@ -96,6 +96,10 @@
   font-size: 1rem;
   height: 2rem;
   color: #495057;
+}
+
+.order {
+  width: 160px;
 }
 
 @media not all and (min-resolution:.001dpcm) {
