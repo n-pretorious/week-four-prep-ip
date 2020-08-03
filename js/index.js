@@ -20,30 +20,31 @@ $(document).ready(function () {
     let size = $("#pizza select").val()
     let quantity = $("#pizza .quantity").val()
     let price
+
     let calculatePrice = () => {
       if (category === "classic pizzas") {
         if (size === "small" && quantity >= 1) {
           if ($('input[type="checkbox"]').is(":checked")) {
-            price =  quantity * 500 + 100
+            price = quantity * 500 + 100
             return price
           } else {
-            price =  quantity * 500
+            price = quantity * 500
             return price
           }
         } else if (size === "medium" && quantity >= 1) {
           if ($('input[type="checkbox"]').is(":checked")) {
-            price =  quantity * 750 + 100
+            price = quantity * 750 + 100
             return price
           } else {
-            price =  quantity * 750
+            price = quantity * 750
             return price
           }
         } else if (size === "large" && quantity >= 1) {
           if ($('input[type="checkbox"]').is(":checked")) {
-            price =  quantity * 950 + 100
+            price = quantity * 950 + 100
             return price
           } else {
-            price =  quantity * 950
+            price = quantity * 950
             return price
           }
         } else {
@@ -52,26 +53,26 @@ $(document).ready(function () {
       } else if (category === "deluxe pizzas") {
         if (size === "small" && quantity >= 1) {
           if ($('input[type="checkbox"]').is(":checked")) {
-            price =  quantity * 550 + 100
+            price = quantity * 550 + 100
             return price
           } else {
-            price =  quantity * 550
+            price = quantity * 550
             return price
           }
         } else if (size === "medium" && quantity >= 1) {
           if ($('input[type="checkbox"]').is(":checked")) {
-            price =  quantity * 800 + 100
+            price = quantity * 800 + 100
             return price
           } else {
-            price =  quantity * 800
+            price = quantity * 800
             return price
           }
         } else if (size === "large" && quantity >= 1) {
           if ($('input[type="checkbox"]').is(":checked")) {
-            price =  quantity * 1000 + 100
+            price = quantity * 1000 + 100
             return price
           } else {
-            price =  quantity * 1000
+            price = quantity * 1000
             return price
           }
         } else {
@@ -80,21 +81,21 @@ $(document).ready(function () {
       } else if (category === "supreme pizzas") {
         if (size === "small" && quantity >= 1) {
           if ($('input[type="checkbox"]').is(":checked")) {
-            price =  quantity * 600 + 100
+            price = quantity * 600 + 100
           } else {
-            price =  quantity * 600
+            price = quantity * 600
           }
         } else if (size === "medium" && quantity >= 1) {
           if ($('input[type="checkbox"]').is(":checked")) {
-            price =  quantity * 940 + 100
+            price = quantity * 940 + 100
           } else {
-            price =  quantity * 940
+            price = quantity * 940
           }
         } else if (size === "large" && quantity >= 1) {
           if ($('input[type="checkbox"]').is(":checked")) {
-            price =  quantity * 1210 + 100
+            price = quantity * 1210 + 100
           } else {
-            price =  quantity * 1210
+            price = quantity * 1210
           }
         } else {
           alert("Kindly pick pizza SIZE: & QTY: for " + flavour)
@@ -104,8 +105,8 @@ $(document).ready(function () {
       }
     }
     calculatePrice()
-  
-    
+
+
     let pizzaOrdered = new pizza(
       category,
       flavour,
@@ -113,12 +114,18 @@ $(document).ready(function () {
       quantity,
       price
     )
+    if (pizzaOrdered.size != "" && pizzaOrdered.quantity > 0) {
+      // Make first letter capital
+      pizzaOrdered.flavour = pizzaOrdered.flavour[0].toUpperCase() + pizzaOrdered.flavour.slice(1)
 
-    // Make first letter capital
-    pizzaOrdered.flavour = pizzaOrdered.flavour[0].toUpperCase() + pizzaOrdered.flavour.slice(1)
+      let orderNumber = $('#checkout-ul li').length + 1
 
-    let withTopping = $('input[type="checkbox"]').is(":checked") ? '<small class="text-muted">With topping</small>' : '<small class="text-muted"></small>'
+      // format checkout info depending on whether topping is checked or not
+      let withTopping = $('input[type="checkbox"]').is(":checked") ? '<small class="text-muted">With topping</small>' : '<small class="text-muted"></small>'
 
-    $("#checkout-ul").append('<li class="list-group-item d-flex justify-content-between lh-condensed"><div><h6>' + pizzaOrdered.flavour + '<h6>' + withTopping  + '</div><span class="text-muted">Ksh. ' + pizzaOrdered.price + '</span></li>')
+      $(".badge").text(orderNumber)
+
+      $("#checkout-ul").append('<li class="list-group-item d-flex justify-content-between lh-condensed"><div><h6>' + pizzaOrdered.flavour + '<h6>' + withTopping + '</div><span class="text-muted">Ksh. ' + pizzaOrdered.price + '</span></li>')
+    }
   })
 })
