@@ -145,7 +145,7 @@ $(document).ready(function () {
 
       $(".badge").text(orderNumber)
 
-      $("#checkout-ul").append('<li class="list-group-item d-flex justify-content-between lh-condensed"><div><h6>' + pizzaOrdered.flavour + '<h6><small class="text-muted">' + crust + ' crust ' + withTopping + '</small></div><span class="text-muted">Ksh. ' + pizzaOrdered.price + '</span></li>')
+      $("#checkout-ul").append('<li class="list-group-item d-flex justify-content-between lh-condensed"><div><h6>' + pizzaOrdered.flavour + ' <small class="text-muted">(x' + pizzaOrdered.quantity + ')</small><h6><small class="text-muted">' + crust + ' crust ' + withTopping + '</small></div><span class="text-muted">Ksh. ' + pizzaOrdered.price + '</span></li>')
 
       $("#total-price").text(totalPrice)
     }
