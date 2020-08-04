@@ -6,12 +6,9 @@ function pizza(category, flavour, size, quantity, price) {
     this.price = price
 }
 
-// an array of pizzas orders
-let order = []
-
-
-
 $(document).ready(function () {
+  let totalPrice = 0
+
   // set flavour option depending on pizza category
   $("#category-select").change(function () {
     let val = $(this).val();
@@ -133,6 +130,9 @@ $(document).ready(function () {
       quantity,
       price
     )
+
+    totalPrice += pizzaOrdered.price
+  
     if (pizzaOrdered.size != "" && pizzaOrdered.quantity > 0) {
       // Make first letter capital
       pizzaOrdered.flavour = pizzaOrdered.flavour[0].toUpperCase() + pizzaOrdered.flavour.slice(1)
@@ -146,6 +146,8 @@ $(document).ready(function () {
       $(".badge").text(orderNumber)
 
       $("#checkout-ul").append('<li class="list-group-item d-flex justify-content-between lh-condensed"><div><h6>' + pizzaOrdered.flavour + '<h6><small class="text-muted">' + crust + ' crust ' + withTopping + '</small></div><span class="text-muted">Ksh. ' + pizzaOrdered.price + '</span></li>')
+
+      $("#total-price").text(totalPrice)
     }
   })
 })
