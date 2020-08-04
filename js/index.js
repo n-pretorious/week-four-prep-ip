@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     let calculatePrice = () => {
       if (category === "classic") {
-        if (size === "small" && quantity >= 1) {
+        if (size === "small" && crust !== "" && quantity >= 1) {
           if ($('#tops').is(":checked")) {
             price = quantity * 500 + 100
             return price
@@ -50,7 +50,7 @@ $(document).ready(function () {
             price = quantity * 500
             return price
           }
-        } else if (size === "medium" && quantity >= 1) {
+        } else if (size === "medium"  && crust !== "" && quantity >= 1) {
           if ($('#tops').is(":checked")) {
             price = quantity * 750 + 100
             return price
@@ -58,7 +58,7 @@ $(document).ready(function () {
             price = quantity * 750
             return price
           }
-        } else if (size === "large" && quantity >= 1) {
+        } else if (size === "large"  && crust !== "" && quantity >= 1) {
           if ($('#tops').is(":checked")) {
             price = quantity * 950 + 100
             return price
@@ -67,10 +67,10 @@ $(document).ready(function () {
             return price
           }
         } else {
-          alert("Kindly pick pizza SIZE: & QTY: for " + flavour)
+          alert("Kindly pick pizza SIZE: & CRUST: & QTY: for " + flavour)
         }
       } else if (category === "deluxe") {
-        if (size === "small" && quantity >= 1) {
+        if (size === "small" && crust !== "" && quantity >= 1) {
           if ($('#tops').is(":checked")) {
             price = quantity * 550 + 100
             return price
@@ -78,7 +78,7 @@ $(document).ready(function () {
             price = quantity * 550
             return price
           }
-        } else if (size === "medium" && quantity >= 1) {
+        } else if (size === "medium" && crust !== "" && crust !== "" && quantity >= 1) {
           if ($('#tops').is(":checked")) {
             price = quantity * 800 + 100
             return price
@@ -86,7 +86,7 @@ $(document).ready(function () {
             price = quantity * 800
             return price
           }
-        } else if (size === "large" && quantity >= 1) {
+        } else if (size === "large" && crust !== "" && quantity >= 1) {
           if ($('#tops').is(":checked")) {
             price = quantity * 1000 + 100
             return price
@@ -95,29 +95,29 @@ $(document).ready(function () {
             return price
           }
         } else {
-          alert("Kindly pick pizza SIZE: & QTY: for " + flavour)
+          alert("Kindly pick pizza SIZE: & CRUST: & QTY: for " + flavour)
         }
       } else if (category === "supreme") {
-        if (size === "small" && quantity >= 1) {
+        if (size === "small" && crust !== "" && quantity >= 1) {
           if ($('#tops').is(":checked")) {
             price = quantity * 600 + 100
           } else {
             price = quantity * 600
           }
-        } else if (size === "medium" && quantity >= 1) {
+        } else if (size === "medium" && crust !== "" && quantity >= 1) {
           if ($('#tops').is(":checked")) {
             price = quantity * 940 + 100
           } else {
             price = quantity * 940
           }
-        } else if (size === "large" && quantity >= 1) {
+        } else if (size === "large" && crust !== "" && quantity >= 1) {
           if ($('#tops').is(":checked")) {
             price = quantity * 1210 + 100
           } else {
             price = quantity * 1210
           }
         } else {
-          alert("Kindly pick pizza SIZE: & QTY: for " + flavour)
+          alert("Kindly pick pizza SIZE: & CRUST: & QTY: for " + flavour)
         }
       } else {
         alert("No order made")
