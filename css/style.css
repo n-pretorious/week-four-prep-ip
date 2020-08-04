@@ -15,12 +15,42 @@
   width: 400px;
 }
 
-.select {
-  width: 160px;
+.checkout-div {
+  height: 400px;
+}
+
+.list-div {
+  height: 320px;
+  overflow-y: scroll;
+}
+
+#order-img {
+  width: 200px;
+  height: 200px;
+}
+
+#pizza {
+  width: 600px;
 }
 
 .custom-select {
   background-color: aqua;
+}
+
+#flavour-select {
+  width: 250px;
+}
+
+#size-select {
+  width: 200px;
+}
+
+#crust-select {
+  width: 150px;
+}
+
+#category-select {
+  width: 300px;
 }
 
 .number-input input[type="number"] {

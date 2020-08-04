@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <title>Pizza Hub</title>
 </head>
 
 <body>
   <div class="container-fluid">
-    <h1>Pizza Hub</h1>
-    <div class="row">
-      <div class="col-md-9">
+    <h1 class="text-center">Pizza Hub</h1>
+    <div class="row row-one">
+      <div class="col-md-8 mr-5">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -56,474 +56,78 @@
         </div>
       </div>
 
-      <div class="col-md-3">
-        <h2 id="checkout-header">CHECKOUT
-          <span class="badge badge-secondary badge-pill">0</span>
-        </h2>
-        <ul class="list-group mb-3" id="checkout-ul">
-          <!-- lists update as orders are made -->
-        </ul>
-        <div id="dialog" title="Basic dialog">
-          <p class="dialog"></p>
+      <div class="col-md-3 border border-secondary rounded checkout-div">
+        <div class="border-bottom">
+          <h2 class="text-center" id="checkout-header">CHECKOUT
+            <span class="badge badge-secondary badge-pill">0</span>
+          </h2>
+        </div>
+        <div class="list-div">
+          <ul class="list-group mb-3" id="checkout-ul">
+            <!-- lists update as orders are made -->
+          </ul>
         </div>
       </div>
     </div>
-
-    <div class="card">
-      <nav class="navbar navbar-dark bg-dark">
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </nav>
-      <div class="card-header">
-        <form id="pizza">
-          <!-- classic -->
-          <h3 class="category">CLASSIC PIZZAS</h3>
-
+    <div class="row row-two">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="category text-center">PLACE YOUR ORDER</h3>
+          </div>
+  
           <div class="card flex-row flex-wrap">
             <div class="card-header border-0">
-              <img src="//placehold.it/200" alt="">
+              <img src="assets/order.jpg" alt="order" id="order-img">
             </div>
             <div class="card-block px-2 mt-1">
-              <h5 class="card-title">HAWAIIAN</h5>
-              <p class="card-text">Macon - pineapple.</p>
-              <div class="select">
-                <select class="custom-select mr-sm-2 mb-2 size">
-                  <option>Size...</option>
+              <form id="pizza" class="pt-2">
+                <select class="custom-select mr-sm-2 mb-2 size" id="category-select">
+                  <option value="">Category...</option>
+                  <option value="classic">Classic</option>
+                  <option value="deluxe">Deluxe</option>
+                  <option value="supreme">Supreme</option>
+                </select>
+  
+                <select class="custom-select mr-sm-2 mb-2 size" id="flavour-select">
+                  <option value="">Flavour...</option>
+                </select>
+  
+                <select class="custom-select mr-sm-2 mb-2 size" id="size-select">
+                  <option value="">Size...</option>
                   <option value="small">Small</option>
                   <option value="medium">Medium</option>
                   <option value="large">Large</option>
                 </select>
+  
+                <select class="custom-select mr-sm-2 mb-2 size" id="crust-select">
+                  <option value="">Crust...</option>
+                  <option value="crispy">Crispy</option>
+                  <option value="stuffed">Stuffed</option>
+                  <option value="gluten-free">Large</option>
+                </select>
+  
                 <div class="form-check">
                   <label class="form-check-label" for="tops">
-                    <input type="checkbox" class="form-check-input" id="tops" name="topping" value="0">Topping
+                    <input type="checkbox" class="form-check-input" id="tops" name="topping">Topping
                   </label>
                 </div>
-              </div>
-              <div class="def-number-input number-input safari_only">
-                <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                  class="minus"></button>
-                <input class="quantity" min="0" name="quantity" value="0" type="number">
-                <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                  class="plus"></button>
-              </div>
-              <button type="submit" class="btn btn-dark order mb-2">Submit Order</button>
+                <div class="def-number-input number-input safari_only">
+                  <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                    class="minus"></button>
+                  <input id="quantity" min="0" name="quantity" value="0" type="number">
+                  <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                    class="plus"></button>
+                </div>
+                <button type="submit" class="btn btn-dark order mb-2">Submit Order</button>
+              </form>
             </div>
-          </div>
-        </form>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">BOEREWORS</h5>
-          <p class="card-text">100% beef mince - fresh tomato - fresh onion.</p>
-
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">BBQ STEAK</h5>
-          <p class="card-text">Marinated bbq steak.</p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">REGINA</h5>
-          <p class="card-text">Sandwich beef - mushroom.</p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">PERI-PERI CHICKEN</h5>
-          <p class="card-text">Spicy peri-peri chicken.</p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">CHICKEN & MUSHROOM</h5>
-          <p class="card-text">Succulent bbq chicken - mushroom - creamy mayo.</p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">CHICKEN TIKKA</h5>
-          <p class="card-text">Marinated tikka chicken - green pepper - onions.</p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">VEG TIKKA</h5>
-          <p class="card-text">Sweetcorn - red & green pepper - mushroom - onion - jalapeños - tikka sauce.</p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <!-- deluxe pizzas -->
-      <div class="card-header">
-        <h3 class="category">DELUXE PIZZAS</h3>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">CHICKEN & BEEF PEPPERONI</h5>
-          <p class="card-text">Succulent bbq chicken - beef pepperoni mushroom - green pepper.</p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">CHICKEN MACON BBQ</h5>
-          <p class="card-text">Succulent bbq chicken - macon - sweetcorn - onion.</p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">CHICKEN HAWAIIAN</h5>
-          <p class="card-text">Succulent bbq chicken - pineapple.</p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">BEEF PEPPERONI PLUS</h5>
-          <p class="card-text">Double beef pepperoni - mushroom - fresh onion.</p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">CHEESE BURGER</h5>
-          <p class="card-text">100% beef mince - real cheddar cheese.</p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">ROAST VEG & FETA</h5>
-          <p class="card-text">Fresh red & green pepper - olives - feta cheese - mushroom.</p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">VEG FEAST</h5>
-          <p class="card-text">Sweetcorn - green pepper - chilli - onion.</p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">SPICY BOERWORS</h5>
-          <p class="card-text">100% beef mince - fresh onions - green pepper - jalapeño.</p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <!-- supreme pizzas -->
-      <div class="card-header">
-        <h3 class="category">SUPREME PIZZAS</h3>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">NYAMA FEST</h5>
-          <p class="card-text">Bbq steak - pepperoni - boerewors mince - macon - ham - green pepper - onion -
-            sweetcorn
-            - diced tomato - mozzarella cheese.</p>
-
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-              class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-              class="plus"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-          <img src="//placehold.it/100" alt="">
-        </div>
-        <div class="card-block px-2 mt-1">
-          <h5 class="card-title">CHICKEN FEAST</h5>
-          <p class="card-text">Chicken tikka - peri peri - green pepper - onions - sweetcorn - mushroom - mozzarella.
-          </p>
-          <div class="select">
-            <select class="custom-select mr-sm-2 mb-2">
-              <option selected>Size...</option>
-              <option value="0">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
-            </select>
-          </div>
-          <div class="def-number-input number-input safari_only">
-            <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-              class="minus"></button>
-            <input class="quantity" min="0" name="quantity" value="0" type="number">
-            <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-              class="plus"></button>
           </div>
         </div>
       </div>
     </div>
+
+
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
