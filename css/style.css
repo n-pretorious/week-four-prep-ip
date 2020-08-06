@@ -11,12 +11,10 @@
   height: 400px;
 }
 
-.card-text {
-  width: 400px;
-}
-
-.checkout-div {
-  height: 400px;
+#checkout-total {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 .list-div {
@@ -25,8 +23,8 @@
 }
 
 #order-img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
 }
 
 #pizza {

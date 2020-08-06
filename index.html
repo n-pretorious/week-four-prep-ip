@@ -14,8 +14,8 @@
 <body>
   <div class="container-fluid">
     <h1 class="text-center">Pizza Hub</h1>
-    <div class="row row-one">
-      <div class="col-md-8 mr-5">
+    <div class="row">
+      <div class="col-md-12 mr-0">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -55,79 +55,81 @@
           </a>
         </div>
       </div>
-
-      <div class="col-md-3 border border-secondary rounded checkout-div">
-        <div class="border-bottom">
-          <h2 class="text-center" id="checkout-header">CHECKOUT
-            <span class="badge badge-secondary badge-pill">0</span>
-          </h2>
-        </div>
-        <div class="list-div">
-          <ul class="list-group mb-3" id="checkout-ul">
-            <!-- lists update as orders are made -->
-          </ul>
-          <ul class="list-group mb-3 border border-success rounded" id="checkout-total">
-            <li class="list-group-item d-flex justify-content-between">
-              <span class="font-weight-bold text-uppercase">Total (KSH)</span>
-              <strong id="total-price">0</strong>
-            </li>
-          </ul>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card-header">
+          <h3 class="category text-center">PLACE YOUR ORDER</h3>
         </div>
       </div>
-    </div>
-    <div class="row row-two">
-      <div class="col-md-12">
-        <div class="card">
-          <div class="card-header">
-            <h3 class="category text-center">PLACE YOUR ORDER</h3>
+
+      <div class="col-md-8">
+        <div class="card flex-row h-100">
+          <!-- <div class="card-header border-0"> -->
+            <img class="img-thumbnail" src="assets/order.jpg" alt="order" id="order-img">
+          <!-- </div> -->
+
+          <div class="card-block mt-1">
+            <form id="pizza" class="pt-2">
+              <select class="custom-select mr-sm-2 mb-2 size" id="category-select">
+                <option value="">Category...</option>
+                <option value="classic">Classic</option>
+                <option value="deluxe">Deluxe</option>
+                <option value="supreme">Supreme</option>
+              </select>
+        
+              <select class="custom-select mr-sm-2 mb-2 size" id="flavour-select">
+                <option value="">Flavour...</option>
+              </select>
+        
+              <select class="custom-select mr-sm-2 mb-2 size" id="size-select">
+                <option value="">Size...</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+        
+              <select class="custom-select mr-sm-2 mb-2 size" id="crust-select">
+                <option value="">Crust...</option>
+                <option value="crispy">Crispy</option>
+                <option value="stuffed">Stuffed</option>
+                <option value="gluten-free">Large</option>
+              </select>
+        
+              <div class="form-check">
+                <label class="form-check-label" for="tops">
+                  <input type="checkbox" class="form-check-input" id="tops" name="topping">Topping
+                </label>
+              </div>
+              <div class="def-number-input number-input safari_only">
+                <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                  class="minus"></button>
+                <input id="quantity" min="0" name="quantity" value="0" type="number">
+                <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                  class="plus"></button>
+              </div>
+              <button type="submit" class="btn btn-dark order mb-2">Submit Order</button>
+            </form>
           </div>
-  
-          <div class="card flex-row flex-wrap">
-            <div class="card-header border-0">
-              <img src="assets/order.jpg" alt="order" id="order-img">
-            </div>
-            <div class="card-block px-2 mt-1">
-              <form id="pizza" class="pt-2">
-                <select class="custom-select mr-sm-2 mb-2 size" id="category-select">
-                  <option value="">Category...</option>
-                  <option value="classic">Classic</option>
-                  <option value="deluxe">Deluxe</option>
-                  <option value="supreme">Supreme</option>
-                </select>
-  
-                <select class="custom-select mr-sm-2 mb-2 size" id="flavour-select">
-                  <option value="">Flavour...</option>
-                </select>
-  
-                <select class="custom-select mr-sm-2 mb-2 size" id="size-select">
-                  <option value="">Size...</option>
-                  <option value="small">Small</option>
-                  <option value="medium">Medium</option>
-                  <option value="large">Large</option>
-                </select>
-  
-                <select class="custom-select mr-sm-2 mb-2 size" id="crust-select">
-                  <option value="">Crust...</option>
-                  <option value="crispy">Crispy</option>
-                  <option value="stuffed">Stuffed</option>
-                  <option value="gluten-free">Large</option>
-                </select>
-  
-                <div class="form-check">
-                  <label class="form-check-label" for="tops">
-                    <input type="checkbox" class="form-check-input" id="tops" name="topping">Topping
-                  </label>
-                </div>
-                <div class="def-number-input number-input safari_only">
-                  <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                    class="minus"></button>
-                  <input id="quantity" min="0" name="quantity" value="0" type="number">
-                  <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                    class="plus"></button>
-                </div>
-                <button type="submit" class="btn btn-dark order mb-2">Submit Order</button>
-              </form>
-            </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="border-bottom">
+            <h2 class="text-center" id="checkout-header">CHECKOUT
+              <span class="badge badge-secondary badge-pill">0</span>
+            </h2>
+          </div>
+          <div class="list-div">
+            <ul class="list-group mb-3" id="checkout-ul">
+              <!-- lists update as orders are made -->
+            </ul>
+            <ul class="list-group mb-3 border border-success rounded" id="checkout-total">
+              <li class="list-group-item d-flex justify-content-between">
+                <span class="font-weight-bold text-uppercase">Total (KSH)</span>
+                <strong id="total-price">0</strong>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
